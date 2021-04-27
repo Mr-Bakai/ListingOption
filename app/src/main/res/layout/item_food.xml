@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="41dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pizzza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/image_rv_style" />
+
+    <TextView
+        android:id="@+id/textTypeFood"
+        android:text="@string/vegetarian_pizza"
+        app:layout_constraintBottom_toTopOf="@+id/textReview"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/text_type_food_style" />
+
+    <TextView
+        android:id="@+id/text_open_close"
+        android:text="  Open"
+        app:layout_constraintBottom_toBottomOf="@+id/textTypeFood"
+        app:layout_constraintStart_toEndOf="@+id/textTypeFood"
+        app:layout_constraintTop_toTopOf="@+id/textTypeFood"
+        style="@style/text_open_close_style"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textReview"
+        android:text=" 4.6"
+        app:layout_constraintBottom_toTopOf="@+id/textDelivery"
+        app:layout_constraintStart_toStartOf="@+id/textTypeFood"
+        app:layout_constraintTop_toBottomOf="@+id/textTypeFood"
+        style="@style/text_review_style" />
+
+    <TextView
+        android:id="@+id/textReviewAmount"
+        android:text="(601)"
+        app:layout_constraintBottom_toBottomOf="@+id/textReview"
+        app:layout_constraintStart_toEndOf="@+id/textReview"
+        app:layout_constraintTop_toTopOf="@+id/textReview"
+        tools:ignore="RtlSymmetry"
+        style="@style/text_review_amount_style" />
+
+
+    <TextView
+        android:id="@+id/textCountry"
+        android:text="Italian"
+        app:layout_constraintBottom_toBottomOf="@+id/textReviewAmount"
+        app:layout_constraintStart_toEndOf="@+id/textReviewAmount"
+        app:layout_constraintTop_toTopOf="@+id/textReviewAmount"
+        style="@style/text_country_style" />
+
+    <TextView
+        android:id="@+id/textFoodKind"
+        android:text="  Burgers"
+        app:layout_constraintBottom_toBottomOf="@+id/textCountry"
+        app:layout_constraintStart_toEndOf="@+id/textCountry"
+        app:layout_constraintTop_toTopOf="@+id/textCountry"
+        style="@style/text_food_kind" />
+
+    <TextView
+        android:id="@+id/textDelivery"
+        android:text="Delivery: Free"
+        app:layout_constraintStart_toStartOf="@+id/textReview"
+        app:layout_constraintTop_toBottomOf="@+id/textReview"
+        style="@style/text_delivery_cost" />
+
+    <TextView
+        android:id="@+id/textMinMax"
+        android:text="   Minimum: $10"
+        app:layout_constraintBottom_toBottomOf="@+id/textDelivery"
+        app:layout_constraintStart_toEndOf="@+id/textDelivery"
+        app:layout_constraintTop_toTopOf="@+id/textDelivery"
+        style="@style/text_min_max_style" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTimeDelivery"
+        android:text="@string/_10_15min"
+        app:layout_constraintBottom_toBottomOf="@+id/textTypeFood"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/textTypeFood"
+        style="@style/btn_time_del_style" />
+
+    <TextView
+        android:id="@+id/textKm"
+        android:text="  0.8 km away"
+        app:layout_constraintBottom_toBottomOf="@+id/textMinMax"
+        app:layout_constraintEnd_toEndOf="@+id/btnTimeDelivery"
+        style="@style/text_km_style" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

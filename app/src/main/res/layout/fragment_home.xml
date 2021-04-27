@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.home.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDelivery"
+        android:text="@string/delivery"
+        app:cornerRadius="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pick_up"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        style="@style/btn_delivery_style" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pick_up"
+        android:text="@string/pick_up"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/btn_catering"
+        app:layout_constraintStart_toEndOf="@+id/btnDelivery"
+        app:layout_constraintTop_toTopOf="@+id/btnDelivery"
+        style="@style/btn_pick_up_style" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_catering"
+        android:text="@string/catering"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/btn_curbside"
+        app:layout_constraintStart_toEndOf="@+id/btn_pick_up"
+        app:layout_constraintTop_toTopOf="@+id/btn_pick_up"
+        style="@style/btn_catering_style" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_curbside"
+        android:text="@string/curbside"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_catering"
+        app:layout_constraintTop_toTopOf="@+id/btn_catering"
+        tools:ignore="MissingConstraints"
+        style="@style/btn_curbuside_style" />
+
+    <RelativeLayout
+        android:id="@+id/relativeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toTopOf="@+id/main_frame_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDelivery">
+        <requestFocus />
+
+        <EditText
+            android:id="@+id/editText"
+            android:hint="@string/find_store_by_name"
+            style="@style/edit_search_style" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeContainer" />
+</androidx.constraintlayout.widget.ConstraintLayout>
