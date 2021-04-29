@@ -6,96 +6,129 @@
     android:layout_height="wrap_content"
     android:paddingBottom="41dp">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pizzza"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/image_rv_style" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            style="@style/image_rv_style"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pizzza" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="invisible"
+            android:id="@+id/containerOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:background="@drawable/up_bg"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/textOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spend 25$, save $5"
+                android:textColor="@color/white"
+                android:fontFamily="@font/product_sans_regular"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/textTypeFood"
+        style="@style/text_type_food_style"
         android:text="@string/vegetarian_pizza"
         app:layout_constraintBottom_toTopOf="@+id/textReview"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_chainStyle="packed"
-        style="@style/text_type_food_style" />
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/text_open_close"
+        style="@style/text_open_close_style"
         android:text="  Open"
         app:layout_constraintBottom_toBottomOf="@+id/textTypeFood"
         app:layout_constraintStart_toEndOf="@+id/textTypeFood"
         app:layout_constraintTop_toTopOf="@+id/textTypeFood"
-        style="@style/text_open_close_style"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textReview"
+        style="@style/text_review_style"
         android:text=" 4.6"
-        app:layout_constraintBottom_toTopOf="@+id/textDelivery"
+        app:layout_constraintBottom_toTopOf="@+id/textDeliveryCost"
         app:layout_constraintStart_toStartOf="@+id/textTypeFood"
-        app:layout_constraintTop_toBottomOf="@+id/textTypeFood"
-        style="@style/text_review_style" />
+        app:layout_constraintTop_toBottomOf="@+id/textTypeFood" />
 
     <TextView
         android:id="@+id/textReviewAmount"
+        style="@style/text_review_amount_style"
         android:text="(601)"
         app:layout_constraintBottom_toBottomOf="@+id/textReview"
         app:layout_constraintStart_toEndOf="@+id/textReview"
         app:layout_constraintTop_toTopOf="@+id/textReview"
-        tools:ignore="RtlSymmetry"
-        style="@style/text_review_amount_style" />
+        tools:ignore="RtlSymmetry" />
 
 
     <TextView
         android:id="@+id/textCountry"
+        style="@style/text_country_style"
         android:text="Italian"
         app:layout_constraintBottom_toBottomOf="@+id/textReviewAmount"
         app:layout_constraintStart_toEndOf="@+id/textReviewAmount"
-        app:layout_constraintTop_toTopOf="@+id/textReviewAmount"
-        style="@style/text_country_style" />
+        app:layout_constraintTop_toTopOf="@+id/textReviewAmount" />
 
     <TextView
         android:id="@+id/textFoodKind"
+        style="@style/text_food_kind"
         android:text="  Burgers"
         app:layout_constraintBottom_toBottomOf="@+id/textCountry"
         app:layout_constraintStart_toEndOf="@+id/textCountry"
-        app:layout_constraintTop_toTopOf="@+id/textCountry"
-        style="@style/text_food_kind" />
+        app:layout_constraintTop_toTopOf="@+id/textCountry" />
 
     <TextView
-        android:id="@+id/textDelivery"
+        android:id="@+id/textDeliveryCost"
+        style="@style/text_delivery_cost"
         android:text="Delivery: Free"
         app:layout_constraintStart_toStartOf="@+id/textReview"
-        app:layout_constraintTop_toBottomOf="@+id/textReview"
-        style="@style/text_delivery_cost" />
+        app:layout_constraintTop_toBottomOf="@+id/textReview" />
 
     <TextView
         android:id="@+id/textMinMax"
+        style="@style/text_min_max_style"
         android:text="   Minimum: $10"
-        app:layout_constraintBottom_toBottomOf="@+id/textDelivery"
-        app:layout_constraintStart_toEndOf="@+id/textDelivery"
-        app:layout_constraintTop_toTopOf="@+id/textDelivery"
-        style="@style/text_min_max_style" />
+        app:layout_constraintBottom_toBottomOf="@+id/textDeliveryCost"
+        app:layout_constraintStart_toEndOf="@+id/textDeliveryCost"
+        app:layout_constraintTop_toTopOf="@+id/textDeliveryCost" />
 
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnTimeDelivery"
+        style="@style/btn_time_del_style"
         android:text="@string/_10_15min"
         app:layout_constraintBottom_toBottomOf="@+id/textTypeFood"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/textTypeFood"
-        style="@style/btn_time_del_style" />
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/textTypeFood" />
 
     <TextView
-        android:id="@+id/textKm"
+        android:id="@+id/textDistance"
+        style="@style/text_km_style"
         android:text="  0.8 km away"
         app:layout_constraintBottom_toBottomOf="@+id/textMinMax"
-        app:layout_constraintEnd_toEndOf="@+id/btnTimeDelivery"
-        style="@style/text_km_style" />
+        app:layout_constraintEnd_toEndOf="@+id/btnTimeDelivery" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,7 @@
     </style>
 
     <style name="btn_pick_up_style">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">#5C9628</item>
@@ -30,7 +30,7 @@
     </style>
 
     <style name="btn_catering_style">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">#5C9628</item>
@@ -38,9 +38,8 @@
     </style>
 
     <style name="btn_curbuside_style">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginEnd">13dp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">#5C9628</item>
         <item name="android:textSize">10sp</item>
@@ -52,11 +51,11 @@
         <item name="android:layout_marginStart">12dp</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:layout_marginEnd">12dp</item>
-        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_marginBottom">17dp</item>
         <item name="android:background">@drawable/up_bg3</item>
         <item name="android:drawableLeft">@drawable/ic_search</item>
         <item name="android:drawableRight">@drawable/ic_options</item>
-        <item name="android:elevation">10dp</item>
+        <item name="android:elevation">4dp</item>
         <item name="android:fontFamily">@font/product_sans_regular</item>
         <item name="android:gravity">center</item>
         <item name="android:inputType">none</item>
@@ -66,9 +65,8 @@
     </style>
 
     <style name="btn_delivery_style">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">13dp</item>
         <item name="android:backgroundTint">#FBBC04</item>
         <item name="android:drawableLeft">@drawable/ic_delivery</item>
         <item name="android:gravity">center</item>
@@ -82,7 +80,7 @@
 
     <style name="vp_style">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="stores_amount_style">
@@ -102,13 +100,12 @@
 
     <style name="recycler_view_style">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginStart">13dp</item>
         <item name="android:layout_marginEnd">13dp</item>
         <item name="android:orientation">vertical</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:visibility">visible</item>
     </style>
 
     <style name="grocery_image_style">
@@ -124,7 +121,6 @@
     <style name="image_rv_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-<!--        <item name="android:background">@color/black</item>-->
     </style>
 
     <style name="text_type_food_style">

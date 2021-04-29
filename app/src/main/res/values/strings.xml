@@ -20,7 +20,6 @@
     <string name="pharmacy">Pharmacy</string>
     <string name="takeaways">Takeaways</string>
 
-
     <string-array name="branches">
         <item>225 Central Park West, NY 10024, USA</item>
         <item>226 Central Park West, NY 10024, USA</item>
@@ -29,8 +28,10 @@
         <item>229 Central Park West, NY 10024, USA</item>
         <item>230 Central Park West, NY 10024, USA</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="profile_fragment">This is the profile Fragment</string>
+    <string name="hint_spinner">225 Central Park West, NY 10024, USA</string>
+    <string name="address">225 Central Park West, NY 10024, USA</string>
 
 </resources>
