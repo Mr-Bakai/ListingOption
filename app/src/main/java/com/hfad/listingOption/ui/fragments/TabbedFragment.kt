@@ -28,4 +28,5 @@ class TabbedFragment: BaseFragment<FragmentTabedBinding, TabbedViewModel>(
             }
         }.attach()
     }
+    // Updated one
 }
